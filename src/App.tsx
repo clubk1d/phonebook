@@ -8,30 +8,31 @@ interface Contact {
   email: string;
   phone: string;
   role: string;
+  profilePicture: string;
 }
 
 function App() {
   const [contacts, setContacts] = useState<Contact[]>([
-    { name: 'Sarah Johnson', department: 'Engineering', email: 'sarah.johnson@company.com', phone: '(555) 123-4567', role: 'Senior Software Engineer' },
-    { name: 'Michael Chen', department: 'Marketing', email: 'michael.chen@company.com', phone: '(555) 234-5678', role: 'Marketing Manager' },
-    { name: 'Emily Rodriguez', department: 'Sales', email: 'emily.rodriguez@company.com', phone: '(555) 345-6789', role: 'Sales Representative' },
-    { name: 'David Thompson', department: 'HR', email: 'david.thompson@company.com', phone: '(555) 456-7890', role: 'HR Specialist' },
-    { name: 'Jessica Wang', department: 'Finance', email: 'jessica.wang@company.com', phone: '(555) 567-8901', role: 'Financial Analyst' },
-    { name: 'Robert Miller', department: 'Engineering', email: 'robert.miller@company.com', phone: '(555) 678-9012', role: 'DevOps Engineer' },
-    { name: 'Amanda Davis', department: 'Operations', email: 'amanda.davis@company.com', phone: '(555) 789-0123', role: 'Operations Manager' },
-    { name: 'Christopher Lee', department: 'Marketing', email: 'christopher.lee@company.com', phone: '(555) 890-1234', role: 'Content Strategist' },
-    { name: 'Lisa Brown', department: 'Sales', email: 'lisa.brown@company.com', phone: '(555) 901-2345', role: 'Account Executive' },
-    { name: 'Kevin Wilson', department: 'Engineering', email: 'kevin.wilson@company.com', phone: '(555) 012-3456', role: 'Frontend Developer' },
-    { name: 'Rachel Green', department: 'HR', email: 'rachel.green@company.com', phone: '(555) 123-4568', role: 'Recruiter' },
-    { name: 'Daniel Martinez', department: 'Finance', email: 'daniel.martinez@company.com', phone: '(555) 234-5679', role: 'Senior Accountant' },
-    { name: 'Ashley Taylor', department: 'Marketing', email: 'ashley.taylor@company.com', phone: '(555) 345-6780', role: 'Social Media Manager' },
-    { name: 'James Anderson', department: 'Operations', email: 'james.anderson@company.com', phone: '(555) 456-7891', role: 'Supply Chain Analyst' },
-    { name: 'Nicole White', department: 'Engineering', email: 'nicole.white@company.com', phone: '(555) 567-8902', role: 'Backend Developer' },
-    { name: 'Brandon Clark', department: 'Sales', email: 'brandon.clark@company.com', phone: '(555) 678-9013', role: 'Sales Manager' },
-    { name: 'Stephanie Lewis', department: 'HR', email: 'stephanie.lewis@company.com', phone: '(555) 789-0124', role: 'HR Director' },
-    { name: 'Ryan Hall', department: 'Finance', email: 'ryan.hall@company.com', phone: '(555) 890-1235', role: 'Budget Analyst' },
-    { name: 'Megan Young', department: 'Marketing', email: 'megan.young@company.com', phone: '(555) 901-2346', role: 'Brand Manager' },
-    { name: 'Tyler King', department: 'Operations', email: 'tyler.king@company.com', phone: '(555) 012-3457', role: 'Project Coordinator' }
+    { name: 'Sarah Johnson', department: 'Engineering', email: 'sarah.johnson@company.com', phone: '(555) 123-4567', role: 'Senior Software Engineer', profilePicture: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Michael Chen', department: 'Marketing', email: 'michael.chen@company.com', phone: '(555) 234-5678', role: 'Marketing Manager', profilePicture: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Emily Rodriguez', department: 'Sales', email: 'emily.rodriguez@company.com', phone: '(555) 345-6789', role: 'Sales Representative', profilePicture: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'David Thompson', department: 'HR', email: 'david.thompson@company.com', phone: '(555) 456-7890', role: 'HR Specialist', profilePicture: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Jessica Wang', department: 'Finance', email: 'jessica.wang@company.com', phone: '(555) 567-8901', role: 'Financial Analyst', profilePicture: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Michael Roberts', department: 'Engineering', email: 'michael.roberts@company.com', phone: '(555) 678-9012', role: 'DevOps Engineer', profilePicture: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Amanda Davis', department: 'Operations', email: 'amanda.davis@company.com', phone: '(555) 789-0123', role: 'Operations Manager', profilePicture: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Christopher Lee', department: 'Marketing', email: 'christopher.lee@company.com', phone: '(555) 890-1234', role: 'Content Strategist', profilePicture: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Sarah Brown', department: 'Sales', email: 'sarah.brown@company.com', phone: '(555) 901-2345', role: 'Account Executive', profilePicture: 'https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Kevin Wilson', department: 'Engineering', email: 'kevin.wilson@company.com', phone: '(555) 012-3456', role: 'Frontend Developer', profilePicture: 'https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Rachel Green', department: 'HR', email: 'rachel.green@company.com', phone: '(555) 123-4568', role: 'Recruiter', profilePicture: 'https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'David Martinez', department: 'Finance', email: 'david.martinez@company.com', phone: '(555) 234-5679', role: 'Senior Accountant', profilePicture: 'https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Ashley Taylor', department: 'Marketing', email: 'ashley.taylor@company.com', phone: '(555) 345-6780', role: 'Social Media Manager', profilePicture: 'https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'James Anderson', department: 'Operations', email: 'james.anderson@company.com', phone: '(555) 456-7891', role: 'Supply Chain Analyst', profilePicture: 'https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Nicole White', department: 'Engineering', email: 'nicole.white@company.com', phone: '(555) 567-8902', role: 'Backend Developer', profilePicture: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Michael Clark', department: 'Sales', email: 'michael.clark@company.com', phone: '(555) 678-9013', role: 'Sales Manager', profilePicture: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Stephanie Lewis', department: 'HR', email: 'stephanie.lewis@company.com', phone: '(555) 789-0124', role: 'HR Director', profilePicture: 'https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Ryan Hall', department: 'Finance', email: 'ryan.hall@company.com', phone: '(555) 890-1235', role: 'Budget Analyst', profilePicture: 'https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Sarah Young', department: 'Marketing', email: 'sarah.young@company.com', phone: '(555) 901-2346', role: 'Brand Manager', profilePicture: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' },
+    { name: 'Tyler King', department: 'Operations', email: 'tyler.king@company.com', phone: '(555) 012-3457', role: 'Project Coordinator', profilePicture: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop' }
   ]);
   const [searchTerm, setSearchTerm] = useState('');
   const [isFileUploaded, setIsFileUploaded] = useState(true);
@@ -55,6 +56,7 @@ function App() {
           email: row.Email || row.email || '',
           phone: row.Phone || row.phone || '',
           role: row.Role || row.role || '',
+          profilePicture: row.ProfilePicture || row.profilePicture || 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
         }));
 
         setContacts(parsedContacts);
@@ -67,7 +69,7 @@ function App() {
   };
 
   const filteredContacts = useMemo(() => {
-    if (!searchTerm) return contacts;
+    if (!searchTerm) return [];
     
     return contacts.filter((contact) =>
       Object.values(contact).some((value) =>
@@ -141,8 +143,11 @@ function App() {
               </div>
               {contacts.length > 0 && (
                 <div className="mt-4 text-sm text-gray-600 text-center">
-                  {filteredContacts.length} of {contacts.length} contacts
-                  {searchTerm && ` matching "${searchTerm}"`}
+                  {searchTerm ? (
+                    `${filteredContacts.length} of ${contacts.length} contacts matching "${searchTerm}"`
+                  ) : (
+                    `${contacts.length} contacts available - start typing to search`
+                  )}
                 </div>
               )}
             </div>
@@ -152,7 +157,13 @@ function App() {
         {/* Results Section */}
         {isFileUploaded && (
           <div className="max-w-6xl mx-auto">
-            {filteredContacts.length === 0 && searchTerm ? (
+            {!searchTerm ? (
+              <div className="text-center py-12">
+                <Search className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-600 mb-2">Start searching</h3>
+                <p className="text-gray-500">Type in the search box above to find contacts</p>
+              </div>
+            ) : filteredContacts.length === 0 ? (
               <div className="text-center py-12">
                 <Users className="h-16 w-16 text-gray-300 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-600 mb-2">No contacts found</h3>
@@ -166,13 +177,20 @@ function App() {
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-100"
                   >
                     <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-800 mb-1">
-                          {contact.name}
-                        </h3>
-                        <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getDepartmentColor(contact.department)}`}>
-                          {contact.department}
-                        </span>
+                      <div className="flex items-center space-x-4">
+                        <img
+                          src={contact.profilePicture}
+                          alt={contact.name}
+                          className="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
+                        />
+                        <div>
+                          <h3 className="text-xl font-semibold text-gray-800 mb-1">
+                            {contact.name}
+                          </h3>
+                          <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getDepartmentColor(contact.department)}`}>
+                            {contact.department}
+                          </span>
+                        </div>
                       </div>
                     </div>
                     
